@@ -3,16 +3,21 @@
 
 # Because these functions are indented under the class Shark, they are called methods. Methods are a special kind of function that are defined within a class.
 
+
 class Shark:
+    def __init__(self, name):
+        self.name = name
+
     def swim(self):
-        print("The shark swims")
+        print(self.name + " is swimming.")
 
     def be_awesome(self):
-        print("The shark is being awesome.")
+        print(self.name + " is being awesome.")
 
 
 def main():
-    sammy = Shark()
+    # Set name of Shark object
+    sammy = Shark("Sammy")
     sammy.swim()
     sammy.be_awesome()
 
