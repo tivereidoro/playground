@@ -14,6 +14,6 @@ for number in num_list:
         repeat = 0
         while repeat < 7:
             print('last item')
-            repeat++
+            repeat += 1
     else:
         print('The value is not 2')
