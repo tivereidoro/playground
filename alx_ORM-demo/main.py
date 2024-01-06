@@ -1,4 +1,4 @@
-# This is the beginning of an demo project.
+# This is the beginning of a demo project.
 # Learning python ORMs.
 
 
