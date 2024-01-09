@@ -23,3 +23,4 @@ for name in usernames:
 
     if result:
         print(name)
+        print(f'Hello dear {name}.')
