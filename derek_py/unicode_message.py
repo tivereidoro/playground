@@ -6,7 +6,7 @@
 #take a string
 message = input("Enter a text in UPPERCASE : ")
 
-secret_message = ""
+secret_message = ''
 
 #cycle thru and convert to unicode
 for char in message:
