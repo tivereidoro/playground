@@ -11,6 +11,7 @@ tree_height = int(input("How tall is the tree.? "))
 spaces = tree_height - 1
 hashes = 1
 
+
 # save stump spaces for later
 stump_spaces = tree_height - 1
 
