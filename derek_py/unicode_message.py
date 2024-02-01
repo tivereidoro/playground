@@ -3,7 +3,7 @@
 
 # Converts a string into a secret message.
 
-#take a string
+# first take a string
 message = input("Enter a text in UPPERCASE : ")
 
 secret_message = ''
