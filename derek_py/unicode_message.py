@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-3
+
 
 # Converts a string into a secret message.
 
