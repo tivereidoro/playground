@@ -4,7 +4,7 @@
 # Converts a string into a secret message.
 
 # first take a string
-message = input("Enter a text in UPPERCASE : ")
+message = input("Enter a text to hide : ")
 
 #set the variable to empty
 secret_message = ""
