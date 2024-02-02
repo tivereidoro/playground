@@ -2,8 +2,7 @@
 
 
 # Creating a guessing game
-print()
-print("Welcome again pal, let's play.\n")
+print("\nWelcome again pal, let's play.\n")
 secret_number = 7
 
 while True:
