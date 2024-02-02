@@ -19,4 +19,4 @@ while True:
     except ValueError:
         print("\nOops, that's not a number. Type a number tween 1 and 10 : \n")
     except:
-        print("\nAn unknown error occured.\n")
+        print("\nAn unknown error occured. Please try again.\n")
