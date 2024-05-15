@@ -37,7 +37,7 @@ while not game_over:
 
     if '_' not in display:
         game_over = True
-        print(f"\nExcellent work. You guessed the right word - {random_word.capitalize()}\n")
+        print(f"\nExcellent. You guessed the right word - {random_word.capitalize()}\n")
         print("🎉 🎉 🎉\n🏆 🏆 🏆\n🥇 🥇 🥇")
 
     print(stages[lives])

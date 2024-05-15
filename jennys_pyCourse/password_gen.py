@@ -2,7 +2,7 @@
 import random
 import string
 '''
-Program to generate ramdom password from user.'''
+Program to generate random password from user.'''
 print("Welcome!!\nLet's generate a secured password for you!!\n")
 
 # Accept the user's input prefernce for the password

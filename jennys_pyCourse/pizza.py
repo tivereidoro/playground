@@ -8,7 +8,7 @@ print("\nYou can add extras:\nA. Pepperoni    ||    B. Cheese")
 
 s_p, m_p, l_p, pp_s, pp_ml, chs = 100, 200, 300, 30, 50, 20
 pizza = input("\nWhat will you have.? (Choose 1, 2, or 3.) ")
-topping = input("\nWould you like extras.? (Enter A or B.. or N if Not) ").upper
+topping = input("Would you like extras.? (Enter A or B.. or N if Not)\n").upper()
 bill = 0
 
 if pizza == "1":

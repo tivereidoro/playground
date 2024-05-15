@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-
 touch $1
 chmod 755 $1
 echo "#!/usr/bin/python3" >> $1
