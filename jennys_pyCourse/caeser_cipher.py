@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-import cipher
-encrypt = cipher.encrypt
-decrypt = cipher.decrypt
-
+from cipher import encrypt, decrypt
 
 while True:
     print("\nWelcome to Caeser's Cipher *#️**🔐\n")
@@ -12,7 +9,7 @@ while True:
             break
 
     print(option)
-    text = input("Type the text to be ciphered below: \n")
+    text = input("Type the text to be ciphered below: \n").lower()
     shift = int(input("Enter cipher key **(number between 1 - 9): "))
 
     # Call the appropriate function
@@ -31,5 +28,5 @@ while True:
     if stat == 'Y':
         continue
     else:
-        print("\nTerminating cipher... \nGoodbye.!")
+        print("\nTerminating cipher..🫡 🫡 \nGoodbye ...")
         break

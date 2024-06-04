@@ -3,15 +3,17 @@
 # Dcrpt = (X - n) mod 26
 import string
 alphabet_list = list(string.ascii_lowercase)
-print(alphabet_list)
 
 
 def encrypt(plain_text, shift_key):
     cipher_text = ""
     for char in plain_text:
-        position = alphabet_list.index(char)
-        new_position = (position + shift_key) % 26
-        cipher_text += alphabet_list[new_position]
+        if char in alphabet_list:
+            position = alphabet_list.index(char)
+            new_position = (position + shift_key) % 26
+            cipher_text += alphabet_list[new_position]
+        else:
+            cipher_text += char
 
     return cipher_text
 
@@ -19,8 +21,11 @@ def encrypt(plain_text, shift_key):
 def decrypt(cipher_text, shift_key):
     plain_text = ""
     for char in cipher_text:
-        position = alphabet_list.index(char)
-        new_position = (position - shift_key) % 26
-        plain_text += alphabet_list[new_position]
+        if char in alphabet_list:
+            position = alphabet_list.index(char)
+            new_position = (position - shift_key) % 26
+            plain_text += alphabet_list[new_position]
+        else:
+            plain_text += char
 
     return plain_text
