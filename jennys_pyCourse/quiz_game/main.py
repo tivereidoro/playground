@@ -14,9 +14,10 @@ score = 0
 for question in questions:
     print(question)
     user_answer = input("Your answer: ")
+    
     if user_answer in answers:
-        print("Correct!")
         score += 1
+        print("Correct!")
     else:
         print("You got that wrong!")
 
