@@ -18,5 +18,5 @@ if __name__ == '__main__':
     bike1.start()
     scooter1 = Scooter()
     scooter1.start()
-    car = Car()
+    car1 = Car()
     car.start()
