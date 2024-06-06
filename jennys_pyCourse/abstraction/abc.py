@@ -16,7 +16,7 @@ class Car:
 if __name__ == '__main__':
     bike1 = Bike()
     bike1.start()
-    scooter = Scooter()
+    scooter1 = Scooter()
     scooter.start()
     car = Car()
     car.start()
