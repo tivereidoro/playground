@@ -11,3 +11,12 @@ class Scooter:
 class Car:
     def start():
         print('Start with key')
+
+
+if __name__ == '__main__':
+    bike = Bike()
+    bike.start()
+    scooter = Scooter()
+    scooter.start()
+    car = Car()
+    car.start()
