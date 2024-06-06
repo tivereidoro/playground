@@ -4,7 +4,6 @@ class Bike:
     def start():
         print('Start with kick')
     
-
 class Scooter:
     def start():
         print('Start scooter with self')
