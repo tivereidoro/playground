@@ -1,15 +1,9 @@
 #!/usr/bin/python3
 
-class Person():
-    def __init__(self, name, age, gender) -> None:
-        self.name = name
-        self.age = age
-        self.gender = gender
+class Square:
+    pass
 
-    
-    def __str__(self) -> str:
-        return f"Name: {self.name}, Age: {self.age}, Gender: {self.gender}"
-    
-
-p1 = Person('Jude', 28, 'male')
-print(p1)
+my_square = Square()
+print(type(my_square))
+print(my_square.__dict__)
+print(Square.__dict__)
