@@ -4,7 +4,6 @@ class Customer:
     """ My demo class for practicing
     OOP with python.
     """
-
     def __init__(self, name, membership_type) -> None:
         """ Initialisation method.
         """
