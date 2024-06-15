@@ -14,7 +14,25 @@ class Customer:
     def __str__(self) -> str:
         """ Stringify member instance.
         """
-        return f"Customer: {self.name}\nSubscription: {self.membership_type} member."
-    
-    def 
+        return (
+            f"Customer: {self.name}\n
+            Subscription: {self.membership_type} member")
 
+    def __repr__(self) -> str:
+        """ Repr method
+        """
+        pass
+
+    def update_membership(self, new_membership):
+        """ Update a member's sub plan.
+        """
+        print("Updating your membership...")
+        self.membership_type = new_membership
+
+
+customers = [
+    Customer('Nelly', 'Gold'),
+    Customer('Tivere', 'Premiumest')
+]
+
+print(customers[0])
