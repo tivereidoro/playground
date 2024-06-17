@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
-
 # Converts a string into a secret message.
-
+# A function will be better here.
 # first take a string
 print()
 message = input("Enter a text to hide : ")
