@@ -4,6 +4,7 @@
 # Converts a string into a secret message.
 
 # first take a string
+print()
 message = input("Enter a text to hide : ")
 
 #set the variable to empty
