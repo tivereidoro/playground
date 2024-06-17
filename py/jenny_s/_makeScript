@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-file_name=$1'.py'
+file_name=`$1.py`
 
 touch $file_name
 chmod 755 $file_name
