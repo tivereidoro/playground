@@ -13,9 +13,7 @@ class Customer:
     def __str__(self) -> str:
         """ Stringify member instance.
         """
-        return (
-            f"Customer: {self.name}\n
-            Subscription: {self.membership_type} member")
+        return f"Customer:\n{self.name} - {self.membership_type} member"
 
     def __repr__(self) -> str:
         """ Repr method
@@ -34,4 +32,11 @@ customers = [
     Customer('Tivere', 'Premiumest')
 ]
 
-print(customers[0])
+print(customers[1])
+
+
+
+nums = [2, 4, 8, 3]
+
+print(list(map(lambda x: pow(x, 2), nums)))
+
