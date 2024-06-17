@@ -17,7 +17,6 @@ for char in message:
 print(f"\nYour secret message is {secret_message}.")
 
 #cycle thru in pairs
-
 original_message = ""
 
 for num in range(0, len(secret_message)-1, 2):
@@ -27,5 +26,5 @@ for num in range(0, len(secret_message)-1, 2):
 
     original_message += chr(int(char_code) + 23)
 
-#back to original message 
+#back to original message attempt
 print(f"\nYour actual message was '{original_message}'")
