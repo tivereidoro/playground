@@ -26,5 +26,5 @@ for num in range(0, len(secret_message)-1, 2):
 
     original_message += chr(int(char_code) + 23)
 
-#back to original message attempt
+#back to original message
 print(f"\nYour actual message was '{original_message}'")
