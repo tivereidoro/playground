@@ -34,5 +34,5 @@ Employee.propTypes = {
     role: PropTypes.string.isRequired,
     avatar: PropTypes.string,
     id: PropTypes.number.isRequired,
-    update: PropTypes.func,
+    update: PropTypes.object,
 }
