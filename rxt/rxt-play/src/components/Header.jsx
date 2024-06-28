@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -12,7 +13,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+export default function Header({ children }) {
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -145,8 +146,25 @@ export default function Header() {
                             ))}
                         </div>
                     </DisclosurePanel>
+
+
+                    {/* Add children components here
+                        to allow the header surround the App
+                    */}
+
+                    {children}
                 </>
             )}
         </Disclosure>
     )
 }
+
+
+
+
+
+// Define props validation
+Header.propTypes = {
+    children: PropTypes.element,
+}
+

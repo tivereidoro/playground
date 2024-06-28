@@ -1,79 +1,15 @@
 import './styles/index.css';
-import { useState } from 'react';
-import avatar1 from './assets/01.jpg';
-import avatar2 from './assets/02.jpg';
-import avatar3 from './assets/03.jpg';
-import avatar4 from './assets/04.jpg';
-import avatar5 from './assets/05.jpg';
-import Employee from '../components/Employee';
-import AddEmployee from '../components/AddEmployee';
-import EditEmployee from '../components/EditEmployee';
-import { v4 as uuidv4 } from 'uuid';
-import Header from '../components/Header';
+import Header from './components/Header';
+import EmployeesPage from './pages/EmployeesPage';
 
 
 export default function App() {
 
-
-  // Function for editing and updating
-  // an employee's details.
-  function updateEmployee(id, newName, newRole) {
-    const updatedEmployees = employees.map((employee) => {
-      if (id == employee.id) {
-
-        // Update and return the new employee
-        // if the id matches
-        return { ...employee, name: newName, role: newRole }
-      }
-
-      return employee;
-    });
-    setEmployees(updatedEmployees);
-  }
-
-  // Adds new employee to the list
-  function addNewEmployee(name, role, avatar) {
-    const newEmployee = {
-      id: uuidv4(),
-      name: name,
-      role: role,
-      avatar: avatar,
-    }
-    setEmployees([...employees, newEmployee]);
-  }
-
   return (
-    <div className='App min-h-screen bg-gray-300'>
-      <Header />
-      {showEmployee ?
-
-        <>
-          <div className='flex flex-wrap justify-center py-3'>
-            {employees.map((employee) => {
-              // Define and pass a component as prop
-              const editEmployee = <EditEmployee id={employee.id} name={employee.name} role={employee.role} update={updateEmployee} />
-
-              return (
-                <Employee
-                  name={employee.name}
-                  role={employee.role}
-                  avatar={employee.avatar}
-                  key={employee.id}
-                  id={employee.id}
-                  update={editEmployee}
-                />
-              )
-            })}
-          </div>
-
-          <AddEmployee func={addNewEmployee} />
-        </>
-
-        :
-
-        <p>You need admin priviledges to see this page</p>
-      }
-
-    </div>
+    <>
+      <Header>
+        <EmployeesPage />
+      </Header>
+    </>
   )
 }
