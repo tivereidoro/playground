@@ -6,8 +6,9 @@ import avatar3 from './assets/03.jpg';
 import avatar4 from './assets/04.jpg';
 import avatar5 from './assets/05.jpg';
 import Employee from './components/Employee';
+import AddEmployee from './components/AddEmployee';
 import EditEmployee from './components/EditEmployee';
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function App() {
@@ -39,27 +40,42 @@ export default function App() {
     setEmployees(updatedEmployees);
   }
 
+  // Adds new employee to the list
+  function addNewEmployee(name, role, avatar) {
+    const newEmployee = {
+      id: uuidv4(),
+      name: name,
+      role: role,
+      avatar: avatar,
+    }
+    setEmployees([...employees, newEmployee]);
+  }
+
   return (
     <div className='App'>
       {showEmployee ?
 
-        <div className='flex flex-wrap justify-center'>
-          {employees.map((employee) => {
-            // Define and pass a component as prop
-            const editEmployee = <EditEmployee id={employee.id} name={employee.name} role={employee.role} update={updateEmployee} />
+        <>
+          <div className='flex flex-wrap justify-center'>
+            {employees.map((employee) => {
+              // Define and pass a component as prop
+              const editEmployee = <EditEmployee id={employee.id} name={employee.name} role={employee.role} update={updateEmployee} />
 
-            return (
-              <Employee
-                name={employee.name}
-                role={employee.role}
-                avatar={employee.avatar}
-                key={employee.id}
-                id={employee.id}
-                update={editEmployee}
-              />
-            )
-          })}
-        </div>
+              return (
+                <Employee
+                  name={employee.name}
+                  role={employee.role}
+                  avatar={employee.avatar}
+                  key={employee.id}
+                  id={employee.id}
+                  update={editEmployee}
+                />
+              )
+            })}
+          </div>
+
+          <AddEmployee func={addNewEmployee} />
+        </>
 
         :
 
