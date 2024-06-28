@@ -6,6 +6,7 @@ import avatar3 from './assets/03.jpg';
 import avatar4 from './assets/04.jpg';
 import avatar5 from './assets/05.jpg';
 import Employee from './components/Employee';
+import EditEmployee from './components/EditEmployee';
 // import { v4 as uuidv4 } from 'uuid';
 
 
@@ -43,20 +44,21 @@ export default function App() {
       {showEmployee ?
 
         <div className='flex flex-wrap justify-center'>
-          {employees.map(
-            (employee) => {
-              return (
-                <Employee
-                  name={employee.name}
-                  role={employee.role}
-                  avatar={employee.avatar}
-                  key={employee.id}
-                  id={employee.id}
-                  update={updateEmployee}
-                />
-              )
-            }
-          )}
+          {employees.map((employee) => {
+            // Define and pass a component as prop
+            const editEmployee = <EditEmployee id={employee.id} name={employee.name} role={employee.role} update={updateEmployee} />
+
+            return (
+              <Employee
+                name={employee.name}
+                role={employee.role}
+                avatar={employee.avatar}
+                key={employee.id}
+                id={employee.id}
+                update={editEmployee}
+              />
+            )
+          })}
         </div>
 
         :
