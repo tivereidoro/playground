@@ -16,9 +16,10 @@ export default function AddEmployee({ func }) {
 
     return (
         <div>
+            {/* Button to add a new employee */}
             <button onClick={handleShow} className="block m-5 mx-auto px-4 py-2 text-base text-white bg-purple-600 font-bold rounded border border-purple-200 hover:text-white hover:bg-purple-800 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">+ Add Employee</button>
 
-            {/* Pop-up modal for editing employee details */}
+            {/* Pop-up modal for adding new employee */}
             <Modal
                 show={show}
                 onHide={handleClose}
@@ -30,15 +31,17 @@ export default function AddEmployee({ func }) {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <form id='editemployee' className="w-full max-w-sm" onSubmit={(e) => {
-                        e.preventDefault();
-                        setName('');
-                        setRole('');
-                        setImg('');
-                        func(employeeName, employeeRole, employeeImg);
-                        handleClose();
-                    }
-                    }>
+                    <form id='editemployee' className="w-full max-w-sm"
+                        // Handle submit action
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            setName('');
+                            setRole('');
+                            setImg('');
+                            func(employeeName, employeeRole, employeeImg);
+                            handleClose();
+                        }
+                        }>
                         {/* Employee name input */}
                         <div className="md:flex md:items-center mb-6">
                             <div className="md:w-1/3">
