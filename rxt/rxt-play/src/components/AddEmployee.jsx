@@ -17,7 +17,7 @@ export default function AddEmployee({ func }) {
     return (
         <div>
             {/* Button to add a new employee */}
-            <button onClick={handleShow} className="block m-5 mx-auto px-4 py-2 text-base text-white bg-purple-600 font-bold rounded border border-purple-200 hover:text-white hover:bg-purple-800 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">+ Add Employee</button>
+            <button onClick={handleShow} className="block m-5 mx-auto px-4 py-2 text-base text-white bg-purple-700 font-bold rounded border border-purple-200 hover:text-white hover:bg-purple-900 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">+ Add Employee</button>
 
             {/* Pop-up modal for adding new employee */}
             <Modal

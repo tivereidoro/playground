@@ -9,6 +9,7 @@ import Employee from './components/Employee';
 import AddEmployee from './components/AddEmployee';
 import EditEmployee from './components/EditEmployee';
 import { v4 as uuidv4 } from 'uuid';
+import Header from './components/Header';
 
 
 export default function App() {
@@ -52,11 +53,12 @@ export default function App() {
   }
 
   return (
-    <div className='App'>
+    <div className='App min-h-screen bg-gray-300'>
+      <Header />
       {showEmployee ?
 
         <>
-          <div className='flex flex-wrap justify-center'>
+          <div className='flex flex-wrap justify-center py-3'>
             {employees.map((employee) => {
               // Define and pass a component as prop
               const editEmployee = <EditEmployee id={employee.id} name={employee.name} role={employee.role} update={updateEmployee} />
