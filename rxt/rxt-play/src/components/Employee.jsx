@@ -33,6 +33,10 @@ Employee.propTypes = {
     name: PropTypes.string.isRequired,
     role: PropTypes.string.isRequired,
     avatar: PropTypes.string,
-    id: PropTypes.number.isRequired,
     update: PropTypes.object,
+    func: PropTypes.func,
+    id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
 }

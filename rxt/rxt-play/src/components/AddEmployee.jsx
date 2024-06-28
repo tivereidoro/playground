@@ -106,6 +106,9 @@ AddEmployee.propTypes = {
     // name: PropTypes.string.isRequired,
     // role: PropTypes.string.isRequired,
     // avatar: PropTypes.string,
-    id: PropTypes.number,
     func: PropTypes.func,
+    id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
 }
