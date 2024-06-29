@@ -5,6 +5,8 @@ import avatar2 from '../assets/02.jpg';
 import avatar3 from '../assets/03.jpg';
 import avatar4 from '../assets/04.jpg';
 import avatar5 from '../assets/05.jpg';
+import avatar6 from '../assets/06.jpg';
+import avatar9 from '../assets/09.jpg';
 import Employee from '../components/Employee';
 import AddEmployee from '../components/AddEmployee';
 import EditEmployee from '../components/EditEmployee';
@@ -16,12 +18,11 @@ export default function EmployeesPage() {
   const [employees, setEmployees] = useState([
     { id: 1, name: 'Tivere', role: 'Jnr. Engineer', avatar: avatar2 },
     { id: 2, name: 'Osaretin', role: 'Intern', avatar: avatar1 },
-    { id: 3, name: 'Caleb', role: 'Tester', avatar: avatar4 },
+    { id: 3, name: 'Caleb', role: 'Tester', avatar: avatar6 },
     { id: 4, name: 'Pneuma', role: 'Developer', avatar: avatar4 },
     { id: 5, name: 'Jake', role: 'Frontend Dev.', avatar: avatar3 },
     { id: 6, name: 'Nelly', role: 'P.M', avatar: avatar5 },
-    { id: 7, name: 'Lyric', role: 'Intern', avatar: avatar2 },
-    // { id: 8, name: 'Jesse', role: 'Intern', avatar: avatar5 },
+    { id: 7, name: 'Lyric', role: 'Intern', avatar: avatar9 },
   ]);
 
   // Function for editing and updating
